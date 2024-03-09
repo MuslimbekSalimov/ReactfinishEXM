@@ -6,8 +6,12 @@
 }
 
 .recommend {
-  width: 1200px;
+  width: 1150px;
 
+}
+
+.recommend::-webkit-scrollbar{
+  display: none;
 }
 
 .dollie__flex {
@@ -42,10 +46,14 @@
 }
 
 .api__flex {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-content: space-between;
-  gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 1200px;
+}
+
+.api__flex::-webkit-scrollbar {
+  display: none;
 }
 
 // .dollie__flex {

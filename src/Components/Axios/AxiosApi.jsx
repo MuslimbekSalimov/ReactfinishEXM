@@ -59,7 +59,7 @@ function AxiosApi({ search }) {
           <ul className="dollie__flex">
             <li className="dollie__item">
               <img src={dollie} alt="dollie" width={50} height={50} />
-              <p className="dollie__text">Dollie Blair</p>
+              <a className="dollie__text" href="/channel/">Dollie Blair</a>
             </li>
             <img
               className="home__arrow"
@@ -118,7 +118,7 @@ function AxiosApi({ search }) {
       <ul className="dollie__flex food">
         <li className="dollie__item">
           <img src={oval} alt="dollie" width={50} height={50} />
-          <p className="dollie__text">Food & Drink</p>
+          <Link className="dollie__text" to={"/channel/"}>Food & Drink</Link>
           <p className="food__text">Recommended channel for you</p>
         </li>
         <div className="food__flex">

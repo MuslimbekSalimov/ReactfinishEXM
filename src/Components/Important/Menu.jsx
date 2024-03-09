@@ -22,9 +22,14 @@ import Eunice from "./img/Oval@3x(3).png";
 import Emma from "./img/Oval@3x(4).png";
 import Leah from "./img/Oval@3x(5).png";
 import Setting from "./img/ui-46.png";
+import Languages from "../Hooks/Localization";
+import { Context as ContexLoc } from "../Context/Localization";
 
 export default function Menu() {
+
+  const {lang} = React.useContext(ContexLoc)
   const Xref = React.useRef(null);
+
   return (
     <section className="menu">
       <div className="logo__flex">
@@ -49,61 +54,61 @@ export default function Menu() {
           <div className="menu__list">
             <Link className="menu__link"  to="home">
               <img src={Home} alt="home" width={21} height={19} />
-              <p className="menu__link__text">Home</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link1}</p>
             </Link>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/Trend">
               <img src={Trend} alt="home" width={16} height={21} />
-              <p className="menu__link__text">Trending</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link2}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/Sub">
               <img src={Subs} alt="home" width={17} height={18} />
-              <p className="menu__link__text">Subscriptions</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link3}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/Lib">
               <img src={Library} alt="home" width={20} height={19} />
-              <p className="menu__link__text">Library</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link4}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/His">
               <img src={History} alt="home" width={20} height={18} />
-              <p className="menu__link__text">History</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link5}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/Watch">
               <img src={Watch} alt="home" width={17} height={19} />
-              <p className="menu__link__text">Watch later</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link6}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/FAV">
               <img src={Faourite} alt="home" width={19} height={18} />
-              <p className="menu__link__text">Favourites</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link7}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/like">
               <img src={Liked} alt="home" width={18} height={17} />
-              <p className="menu__link__text">Liked videos</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link8}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/Music">
               <img src={Music} alt="home" width={18} height={20} />
-              <p className="menu__link__text">Music</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link9}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/Game">
               <img src={Game} alt="home" width={22} height={16} />
-              <p className="menu__link__text">Games</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link10}</p>
             </a>
 
-            <a className="menu__link" href="#link">
+            <a className="menu__link" href="/More">
               <img src={More} alt="home" width={14} height={8} />
-              <p className="menu__link__text">Show more</p>
+              <p className="menu__link__text">{Languages[lang].menu.menu__link11}</p>
             </a>
           </div>
 
-          <h1 className="menu__title">Subscriptions</h1>
+          <h1 className="menu__title">{Languages[lang].menu.menu__title}</h1>
 
           <div className="menu__list1">
             <a className="menu__link1" href="channel">

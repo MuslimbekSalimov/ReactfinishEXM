@@ -6,9 +6,17 @@ import Not from "./img/notification.png"
 import pro from "./img/Userpic.png"
 import Logo from "./img/Logo_Black@3x.png"
 import { Link } from "react-router-dom";
-// import { button } from "@mui/material";
+import useTheme from "../Hooks/useTheme";
+import Languages from "../Hooks/Localization";
+import { Context as ContextLocal } from "../Context/Localization";
+import React from "react";
 
 export default function Header() {
+
+  const {lang, setLang} = React.useContext(ContextLocal)
+
+  const [theme, setTheme] = useTheme()
+
   return (
     <header className="header">
       <div className="header__info">
@@ -21,16 +29,15 @@ export default function Header() {
                   <img className="search" src={Search} alt="Search" width={19} height={19}/>
               </form>
 
-              <select >
+              <select value={lang} onChange={(evt) => setLang(evt.target.value)} >
             <option value="uz">UZ</option>
-            <option value="ru">RU</option>
             <option value="en">EN</option>
+            <option value="ru">RU</option>
           </select>
 
-          <select >
-            <option value="uz">Light</option>
-            <option value="ru">Dark</option>
-            {/* <option value="en">EN</option> */}
+          <select value={theme} onChange={(evt) => setTheme(evt.target.value)}>
+            <option value="dark">Light</option>
+            <option value="light">Dark</option>
           </select>
            </div>
 

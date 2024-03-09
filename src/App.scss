@@ -8,6 +8,7 @@
 
 .container {
   max-width: 1920px;
+  width: 100%;
   padding-left: 10px;
   padding-top: 20px;
   margin: 0 auto;
@@ -49,4 +50,15 @@ li {
   background-color: red;
   color: #000;
 
+}
+
+.body {
+  height: inherit;
+  color: #FFF;
+  background-color: #000;
+
+  &--dark {
+    color: #FFF;
+    background-color: #000;
+  }
 }

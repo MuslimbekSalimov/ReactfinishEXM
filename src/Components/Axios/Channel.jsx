@@ -8,9 +8,10 @@ import Channel__img from "./img/Oval.png";
 import noti from "./img/ui-11.png";
 import search from "../Important/img/search.svg";
 import White from "./img/Video.png";
-import img1 from "./img/Oval(1).png"
-import img2 from "./img/Oval(2).png"
-import img3 from "./img/Oval(3).png"
+import PhotosList from "./PhotosList";
+// import img1 from "./img/Oval(1).png"
+// import img2 from "./img/Oval(2).png"
+// import img3 from "./img/Oval(3).png"
 
 function Channel() {
   const [data, setData] = useState(null);
@@ -39,8 +40,8 @@ function Channel() {
         <img src={Channel__img} alt="img" />
 
         <li className="channel__item">
-          <p className="channel__text">Margaret Phelps</p>
-          <span className="channel__span">245K subscribed</span>
+          <p className="channel__text">Muslimbek Official</p>
+          <span className="channel__span">245M subscribed</span>
         </li>
 
         <img src={noti} alt="img" />
@@ -85,24 +86,11 @@ function Channel() {
           </p>
           <span className="flex__span">11k views · 6 months ago</span>
         </div>
-        {/* <li className="flex__item">
-          <span className="flex__span">Recommended channel</span>
-          <a className="flex__items" href="#link">
-            <img src={img1} alt="img" />
-            <p className="flex__text2">Flora Benson</p>
-          </a>
 
-          <a className="flex__items" href="#link">
-            <img src={img2} alt="img" />
-            <p className="flex__text2">Violet Cobb</p>
-          </a>
 
-          <a className="flex__items" href="#link">
-            <img src={img3} alt="img" />
-            <p className="flex__text2">Phillip Mullins</p>
-          </a>
-        </li> */}
+      {/* <PhotosList/> */}
       </div>
+
     </div>
   );
 }
